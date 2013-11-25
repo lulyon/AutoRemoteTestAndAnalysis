@@ -72,6 +72,6 @@ sed "s%replace_sb%$replace_sb%g" | \
 sed "s%replace_sc%$replace_sc%g" | \
 sed "s%replace_sd%$replace_sd%g" > report.md
 
-markdown report.md > report.html
+perl ../Markdown.pl report.md > report.html
 
 
