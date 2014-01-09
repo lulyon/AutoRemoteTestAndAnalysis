@@ -23,7 +23,7 @@ ca<-data[, 2]
 c=max(sy)
 
 
-CairoPNG(paste("time_analysis", ".png", sep=""))
+CairoSVG(paste("time_analysis", ".svg", sep=""))
 plot(x, type='n', xlim=c(0, case_num + 3), ylim=c(0, c*1.1), main='执行时间分析', xlab='测试用例', ylab='时间', xaxt='n', yaxt='n')
 
 axis(side=1, at=1:case_num)

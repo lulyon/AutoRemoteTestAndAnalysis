@@ -85,7 +85,8 @@ for(i in 1:n) {
     cur_para_proficiency <- serial_time[i] / kernel_time_data[j , 2] / kernel_time_data[j , 1];
     mean_para_proficiency[i] <- mean_para_proficiency[i] + cur_para_proficiency;
   }
-  mean_para_proficiency[i] <- mean_para_proficiency[i] / (index - 2 + 1)
+  if(index >= 2)
+	mean_para_proficiency[i] <- mean_para_proficiency[i] / (index - 2 + 1);
 }
 
 outdata <- data.frame(arcgis_time, weight, serial_time, 
@@ -98,7 +99,7 @@ cat("total_table_content=\'", sep="", append=TRUE, file=conc_filename)
 for(i in 1:nrow(outdata)) {
   cat("<tr><td>", i,"</td>", sep="", append=TRUE, file=conc_filename)
   for(j in 1:ncol(outdata)) {
-    cat("<td>", outdata[i, j],"</td>", sep="",  append=TRUE, file=conc_filename)
+    cat("<td>", round(outdata[i, j], digit=2), "</td>", sep="",  append=TRUE, file=conc_filename)
   }
   cat("</tr>", sep="",  append=TRUE, file=conc_filename)
 }

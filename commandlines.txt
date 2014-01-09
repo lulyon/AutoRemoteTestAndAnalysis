@@ -1,8 +1,5 @@
 mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/1_{kernel}.shp -i {datainput_path}/ict_counties.shp -v {datainput_path}/area1.shp
-mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/2_{kernel}.shp -i {datainput_path}/ict_counties.shp -v {datainput_path}/area2.shp
 mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/3_{kernel}.shp -i {datainput_path}/ict_counties.shp -v {datainput_path}/working_range.shp
 mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/4_{kernel}.shp -i {datainput_path}/ict_landuse.shp -v {datainput_path}/area1.shp
-mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/5_{kernel}.shp -i {datainput_path}/ict_landuse.shp -v {datainput_path}/area2.shp
 mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/6_{kernel}.shp -i {datainput_path}/ict_landuse.shp -v {datainput_path}/working_range.shp
-mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/7_{kernel}.shp -i {datainput_path}/HuNan_LandUse.shp -v {datainput_path}/ict_counties.shp
 mpiexec -n {kernel} {executable_path}/overlay -y intersect -t 0.0 -o {dataoutput_path}/8_{kernel}.shp -i {datainput_path}/ict_landuse.shp -v {datainput_path}/ict_counties.shp

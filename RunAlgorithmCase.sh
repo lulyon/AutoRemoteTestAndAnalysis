@@ -17,6 +17,9 @@ declare command_file
 
 source config.ini 
 
+log_path=./logdata
+command_file=./commandlines.txt
+
 measuredtime_path=$log_path
 
 echo "kernel_max: $kernel_max"
@@ -24,8 +27,8 @@ echo "algorithm_name: $algorithm_name"
 echo "executable_path: $executable_path"
 echo "datainput_path: $datainput_path"
 echo "dataoutput_path: $dataoutput_path"
-echo "log_path: $log_path"
-echo "command_file: $command_file"
+# echo "log_path: $log_path"
+# echo "command_file: $command_file"
 
 # while true;
 # do
@@ -49,7 +52,7 @@ echo "command_file: $command_file"
 #        * ) echo "Please answer yes or no.";;
 #    esac
 # done
-
+mkdir -p $log_path;
 
 tempfilename=./local_tempfile_
 
@@ -113,7 +116,7 @@ do
 	while [ $j -le $kernel_max ];
 	do
 		echo "Test case $k with $j kernel begin..."
-		echo "${commands[$i]}" | sed "s#{kernel}#$j#g" | ( read command; printf "$j\t" >>$filename; TIMEFORMAT='%3R'; time ($command 2>&1 >>$logname) 1>/dev/null 2>$tempfilename )
+		echo "${commands[$i]}" | sed "s#{kernel}#$j#g" | ( read command; echo "Running command: $command"; printf "$j\t" >>$filename; TIMEFORMAT='%3R'; time ($command 2>&1 >>$logname) 1>/dev/null 2>$tempfilename )
 		echo "Test case $k with $j kernel takes `cat $tempfilename` seconds"
 		cat $tempfilename >> $filename
 
@@ -154,12 +157,12 @@ then
 fi
 
 echo "archiving log files"
-cd `echo $log_path`
-cd ..
-mv `echo ${log_path##*/}` logdata
-tar cf logdata.tar logdata
-cp logdata.tar `echo $PWD`
-cd `echo $PWD`
+# cd `echo $log_path`
+# cd ..
+# mv `echo ${log_path##*/}` logdata
+tar cf logdata.tar `echo $log_path`
+# cp logdata.tar `echo $PWD`
+# cd `echo $PWD`
 
 echo "Test done."
 

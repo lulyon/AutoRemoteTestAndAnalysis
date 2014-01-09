@@ -18,7 +18,7 @@ x <- data[, 1]
 c=max(data[, -1])
 maxkernel=max(x)
 
-CairoPNG(paste(source_time_data_table_filename, ".png", sep=""))
+CairoSVG(paste(source_time_data_table_filename, ".svg", sep=""))
 plot(x, type='n', xlim=c(0, maxkernel), ylim=c(0, c*1.2), main='用例时间曲线', xlab='核数', ylab='时间', xaxt='n', yaxt='n')
 d=round(c, digits=0)
 axis(side=2, at=seq(0,d*1.1,signif(d/10,digits=1)))

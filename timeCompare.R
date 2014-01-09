@@ -21,7 +21,7 @@ para_time <- data[, 7]
 
 c <- max(c(arcgis_time, serial_time))
 
-CairoPNG(paste("time_compare", ".png", sep=""))
+CairoSVG(paste("time_compare", ".svg", sep=""))
 plot(x, type='n', xlim=c(0, case_num + 3), ylim=c(0, c*1.1), main='执行时间对比', xlab='测试用例', ylab='时间', xaxt='n', yaxt='n')
 axis(side=1, at=1:case_num)
 axis(side=2, at=seq(0,1.1*c,round(c/10, digits=0)))

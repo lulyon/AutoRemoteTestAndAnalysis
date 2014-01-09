@@ -35,16 +35,16 @@ sc <- max(cpu_data[, 3])
 sd <- cpu_data[, 1] %*% cpu_data[, 4]
 
 
-cat("replace_s1=", s1, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s2=", s2, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s3=", s3, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s4=", s4, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s5=", s5, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s6=", s6, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s7=", s7, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s8=", s8, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_s9=", s9, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_sa=", sa, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_sb=", sb, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_sc=", sc, "\n", sep="", append=TRUE, file=conc_filename);
-cat("replace_sd=", sd, "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s1=", round(s1, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s2=", round(s2, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s3=", round(s3, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s4=", round(s4, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s5=", round(s5, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s6=", round(s6, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s7=", round(s7, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s8=", round(s8, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_s9=", round(s9, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_sa=", round(sa, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_sb=", round(sb, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_sc=", round(sc, digit=2), "\n", sep="", append=TRUE, file=conc_filename);
+cat("replace_sd=", round(sd, digit=2), "\n", sep="", append=TRUE, file=conc_filename);

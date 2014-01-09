@@ -83,7 +83,7 @@ ArcGIS执行时间：测试用例在ArcGIS环境下的执行时间，与机器�
 <td>计算时间</td>
 <td>测量时间</td>
 </tr>
-time_table_content
+
 </table>
 
 ### 4.2.2 含IO时间的数据分析表
@@ -101,7 +101,7 @@ time_table_content
 <td>相对加速比</td>
 <td>最优核数</td>
 </tr>
-total_table_content
+
 </table>
 
 ### 4.2.3 不含IO时间数据分析表
@@ -117,37 +117,37 @@ total_table_content
 <td>相对加速比</td>
 <td>最优核数</td>
 </tr>
-cpu_table_content
+
 </table>
 
 
 4.3 测试结果分析图
 ---------------------
 ### 4.3.1 执行时间
-![执行时间对比](time_compare.svg "执行时间对比")
-![执行时间分析](time_analysis.svg "执行时间分析")
-![用例时间曲线](kernel_time_data_table.txt.svg "用例时间曲线")
+![执行时间对比](time_compare.png "执行时间对比")
+![执行时间分析](time_analysis.png "执行时间分析")
+![用例时间曲线](kernel_time_data_table.txt.png "用例时间曲线")
 
 ### 4.3.2 绝对加速比
-![绝对加速比分析](speedup_radio.svg "绝对加速比分析")
+![绝对加速比分析](speedup_radio.png "绝对加速比分析")
 
-从以上图表中可以看出，算法的绝对加速比最高可达 replace_s1 ，最低也有 replace_s2 ，加权平均后为 replace_s3 。
+从以上图表中可以看出，算法的绝对加速比最高可达  ，最低也有  ，加权平均后为  。
 
 ### 4.3.3 相对加速比
-![相对加速比分析](relative_speedup_radio.svg "相对加速比分析")
-![相对加速比分析(不含IO)](relative_speedup_radio_without_io.svg "相对加速比分析(不含IO)")
+![相对加速比分析](relative_speedup_radio.png "相对加速比分析")
+![相对加速比分析(不含IO)](relative_speedup_radio_without_io.png "相对加速比分析(不含IO)")
 
-从以上图表中可以看出，算法在含IO情况下的相对加速比最高可达 replace_s4 ，最低也有 replace_s5 ，加权平均后为 replace_s6 。  
+从以上图表中可以看出，算法在含IO情况下的相对加速比最高可达  ，最低也有  ，加权平均后为  。  
 
-在不含IO情况下的相对加速比最高可达 replace_s7 ，最低也有 replace_s8 ，加权平均后为 replace_s9 。
+在不含IO情况下的相对加速比最高可达  ，最低也有  ，加权平均后为  。
 
 ### 4.3.4 并行效率
-![并行效率](parallel_proficiency.svg "并行效率")
-![并行效率(不含IO)](parallel_proficiency_without_io.svg "并行效率(不含IO)")
+![并行效率](parallel_proficiency.png "并行效率")
+![并行效率(不含IO)](parallel_proficiency_without_io.png "并行效率(不含IO)")
 
-从以上图表中可以看出，算法在含IO情况下的峰值并行效率可达 replace_sa ，平均并行效率为 replace_sb 。  
+从以上图表中可以看出，算法在含IO情况下的峰值并行效率可达  ，平均并行效率为  。  
 
-在不含IO情况下的峰值并行效率可达 replace_sc ，平均并行效率为 replace_sd 。
+在不含IO情况下的峰值并行效率可达  ，平均并行效率为  。
 
 4.4 正确性验证
 ---------------------
@@ -155,7 +155,7 @@ cpu_table_content
 
 5 测试结论
 =====================
-总体来看，算法的绝对加速比是 replace_s3 ，相对加速比是 replace_s6 和 replace_s9  （不含IO） ，峰值并行效率是 replace_sa 和 replace_sc （不含IO），平均并行效率是 replace_sb 和 replace_sd （不含IO）。
+总体来看，算法的绝对加速比是  ，相对加速比是  和   （不含IO） ，峰值并行效率是  和  （不含IO），平均并行效率是  和  （不含IO）。
 
 6 调优建议
 =====================

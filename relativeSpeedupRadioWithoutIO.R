@@ -25,7 +25,7 @@ a=round(a, digits=2)
 b=round(b, digits=2)
 c=round(c, digits=3)
 
-CairoPNG(paste("relative_speedup_radio_without_io", ".png", sep=""))
+CairoSVG(paste("relative_speedup_radio_without_io", ".svg", sep=""))
 plot(x, type='n', xlim=c(0, case_num + 3), ylim=c(0, b*1.1), main='相对加速比分析（不含IO）', xlab='测试用例', ylab='相对加速比', xaxt='n', yaxt='n')
 axis(side=1, at=1:case_num)
 axis(side=2, at=seq(0,1.1*b,0.1))
