@@ -44,12 +44,15 @@ AutoRemoteTestAndAnalysis
 > \#! /bin/bash
 
 > \# 远程主机用户名
+
 > user=username
 
 > \# 远程主机地址
+
 > host=hostname
 
 > \# 测试脚本远程目录
+
 > remote_dir=/home/hpgc/dir
 
 
@@ -70,27 +73,35 @@ AutoRemoteTestAndAnalysis
 > \#! /bin/bash
 
 > \# MPI启用的最大进程数
+
 > kernel_max=32
 
 > \# 算法名称
+
 > algorithm_name=overlay
 
 > \# 测试用例数
+
 > case_num=5
 
 > \# 可执行文件的目录
+
 > executable_path=/home/nfs/executable
 
 > \# 输入数据的目录
+
 > datainput_path=/home/nfs/data
 
 > \# 输出数据的目录
+
 > dataoutput_path=/home/nfs/outputdata
 
 > \# 日志文件的目录
+
 > log_path=/home/hpgc/dir/logdata
 
 > \# 命令行文件的路径
+
 > command_file=/home/hpgc/dir/commandlines.txt
 
 
